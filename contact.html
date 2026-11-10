@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Emerald Escapes | Contact</title>
+		
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+		crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<nav>
+			<a href="index.html" class="logo">
+				<img src="images/emerald-logo.png" alt="Emerald Escapes">
+			</a>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="experiences.html">Experiences</a></li>
+				<li><a href="contact.html" class="active">Contact</a></li>
+			</ul>
+		</nav>
+		
+		<section class="contact-header">
+		
+			<h1> Get in Touch </h1>
+			<p>
+				Have a question about our experiences?
+				Contact our team and we will be happy to help.
+			</p>
+			
+		</section>
+		
+		<!--Contact form section-->
+		<section class="contact-section">
+		
+			<h2> Send us an Enquiry </h2>
+			
+			<form id="contact-form">
+			
+				<!--Name field-->
+				<div class="mb-3">
+					<label for="name" class="form-label">Full Name</label>
+					<input type="text" class="form-control" id="name" name="name">
+				</div>
+				
+				<!--Email field-->
+				<div class="mb-3">
+					<label for="email" class="form-label">Email Address</label>
+					<input type="email" class="form-control" id="email" name="email">
+				</div>
+				
+				<!--Phone field-->
+				<div class="mb-3">
+					<label for="phone" class="form-label">Phone Number</label>
+					<input type="tel" class="form-control" id="phone" name="phone">
+				</div>
+				
+				<!-- Query type field-->
+				<div class="mb-3">
+					<label for="query-type" class="form-label">Type of Enquiry</label>
+					<select class="form-select" id="query-type" name="query-type">
+						<option value="">Select an option</option>
+						<option value="booking">Booking</option>
+						<option value="payment">Payment</option>
+						<option value="information">General Information</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
+				
+				<!--Message field-->
+				<div class="mb-3">
+					<label for="message" class="form-label">Your Message</label>
+					<textarea class="form-control" id="message" name="message" rows="6"></textarea>
+				</div>
+				
+				<!--Form feedback area-->
+				<div id="form-feedback" aria-live="polite"></div>
+				
+				<!--Submit button--> 
+				<button type="submit" class="btn btn-success">
+					Send Enquiry
+				</button>			
+			</form>
+		</section>
+
+			<!--Footer-->
+			<footer class="footer">
+				<div class="footer-top">
+					<div class="footer-brand">
+						<h2>Emerald Escapes</h2>
+					</div>
+					<div class="footer-social">
+						<a href="https://linkedin.com/in/glimaalmeida" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+						<a href="https://github.com/GuiLimaTi" target="_blank" rel="noopener noreferrer">GitHub</a>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<nav class="footer-links">
+						<a href="index.html">Home</a>
+						<a href="experiences.html">Experiences</a>
+						<a href="contact.html">Contact</a>
+					</nav>
+					<p class="footer-copyright">&copy; 2026 Emerald Escapes</p>
+				</div>
+			</footer>
+			
+			<script src="js/script.js"></script>
+			
+	</body>
+</html>
