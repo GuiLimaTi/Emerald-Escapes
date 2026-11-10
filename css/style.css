@@ -1,0 +1,773 @@
+
+body {
+    margin: 0; /*remove standard margin of browser*/
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+/* Navigation Bar*/
+nav {
+    
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #064e3b;
+    padding: 8px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+nav .logo img {
+    display: block;
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+
+    padding: 10px 16px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Adds a house icon before the Home link */
+nav li:nth-child(1) a::before {
+    content: "⌂";
+    font-size: 20px;
+}
+
+/* Adds a location icon before the Experiences link. */
+nav li:nth-child(2) a::before {
+    content: "⌖";
+    font-size: 18px;
+}
+
+/* Adds an envelope icon before the Contact link. */
+nav li:nth-child(3) a::before {
+    content: "✉";
+    font-size: 16px;
+}
+
+nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #fbbf24;
+}
+
+nav li a.active {
+    background-color: #fbbf24;
+    color: #064e3b;
+    font-weight: bold;
+}
+
+/* Home Page - Hero Section*/
+
+.hero {
+    min-height: 500px;
+    padding: 60px; 
+    background-image: url("../images/ireland-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Dark overlay over the hero image */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+/* Keep hero content above the overlay */
+.hero h1,
+.hero p,
+.hero a {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero heading */
+.hero h1 {
+    font-size: 52px;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* Hero description */
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Hero button */
+.hero a {
+    display: inline-block;
+    background-color: #047857;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* Hero button hover effect */
+.hero a:hover {
+    background-color: #065f46;
+}
+
+
+/* HOME PAGE - HIGHLIGHTS */
+
+.highlight {
+    padding: 35px 60px 20px;
+    background-color: white;
+	text-align: center;
+    height: 100%;
+}
+
+.highlight h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.highlight-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* HOME PAGE - ABOUT */
+
+
+.about {
+    padding: 60px 80px;
+    text-align: center;
+    background-color: #f4f7f5;
+}
+
+.about h2 {
+    font-size: 32px;
+    color: #064e3b;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* EXPERIENCES PAGE - HEADER*/
+
+.experience-header {
+    text-align: center;
+    padding: 30px 20px ;	
+	background-color: #087f5b;
+	color:#ffffff;
+}
+
+.experience-header h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.experience-header p {
+    font-size: 18px;
+	max-width: 700px;
+    margin: 0 auto;
+	line-height:1.6;
+}
+
+
+/* EXPERIENCES PAGE - FILTERS  */
+
+.filters {
+    text-align: center;
+    padding: 25px 20px;
+	margin: 0 auto 25px;
+	background-color:#f0fdf4;
+	border: 1px solid #d1fae5;
+	border-radius:12px;
+}
+
+/* Filter heading */
+.filters h2 {
+    color: #064e3b;
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+/* Filter labels */
+.filters label {
+	display: inline-block;
+    font-weight: bold;
+	color: #065f46;
+    margin: 8px 8px 8px 20px;
+}
+
+/* Filter dropdowns */
+.filters select {
+    padding: 10px 14px;
+    border: 1px solid #a7cbb8;
+    border-radius: 8px;
+	background-color:#ffffff;
+	color: #064e3b;
+    font-size: 14px;
+	cursor:pointer;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/*Highlight dropdown when selected*/
+.filters select:focus{
+	outline:none;
+	border-color: #059669;
+	box-shadow: 0 0 0 3px rgba(5,150,105,0.15);
+}
+
+/* EXPERIENCES PAGE - CARD GRID  */
+
+.experiences {
+	padding: 50px 30px;
+}
+
+/* Individual experience card */
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    /* Card shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    /* Smooth hover animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Experience image */
+.experience-card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Experience information */
+.experience-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Experience title */
+.experience-info h2 {
+    color: #064e3b;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+/* Experience description */
+.experience-info p {
+    line-height: 1.5;
+}
+
+/* Keep the final paragraph, containing the price,at the bottom of the card */
+.experience-info p:last-child {
+    margin-top: auto;
+    font-weight: bold;
+    color: #047857;
+}
+
+/* Experience card hover effect */
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+/* RESPONSIVE DESIGN: TABLETS */
+
+@media (max-width: 900px) {
+   
+    /* Reduce hero spacing */
+.hero {
+	padding: 50px 40px;
+}
+.hero h1 {
+	font-size: 44px;
+}
+
+/* Reduce Home section spacing */
+.highlights {
+	padding: 40px 30px;
+}
+
+.about {
+	padding: 50px 40px;
+}
+	}
+
+/* RESPONSIVE DESIGN: MOBILE PHONES */
+
+@media (max-width: 600px) {
+
+    /* Adjust navigation for mobile screens */
+nav {
+    padding: 8px 12px;
+}
+
+nav .logo img {
+    height: 45px;
+}
+
+nav ul {
+    gap: 2px;
+}
+
+nav li a {
+    font-size: 12px;
+    padding: 8px 7px;
+    gap: 4px;
+}
+
+/* Adjust hero for small screens */
+.hero {
+    min-height: 400px;
+    padding: 40px 25px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 17px;
+}
+
+.highlights {
+	padding: 35px 20px;
+}
+
+.highlight {
+    padding: 15px;
+}
+
+/* Reduce About section spacing */
+.about {
+    padding: 40px 25px;
+}
+
+.about h2 {
+    font-size: 28px;
+}
+
+/* Experiences page heading */
+.experience-header {
+    padding: 35px 20px 20px;
+}
+
+.experience-header h1 {
+    font-size: 30px;
+}
+
+.experience-header p {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+/* Adjust card text for smaller screens */
+.experience-info {
+	padding: 18px;
+    }
+	
+.experience-info h2 {
+    font-size: 20px;
+}
+
+.filters {
+    padding: 15px;
+}
+
+.filters h2 {
+    font-size: 22px;
+}
+
+.filters label {
+    display: block;
+    margin: 12px 0 6px;
+}
+
+.filters select {
+    max-width: 100%;
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #064e3b;
+    color: #ffffff;
+    padding: 16px 4%;
+}
+
+.footer-top,
+.footer-bottom {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-top {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-brand h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.footer-bottom {
+    padding-top: 10px;
+}
+
+.footer-links,
+.footer-social {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a,
+.footer-social a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: #fbbf24;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    margin: 0;
+    text-align: right;
+}
+
+@media (max-width: 700px) {
+.footer-top,
+.footer-bottom {
+   flex-direction: column;
+   text-align: center;
+   gap: 12px;
+}
+
+.footer-links,
+.footer-social {
+    justify-content: center;
+}
+
+.footer-copyright {
+    text-align: center;
+    }
+}
+
+
+/* Contact Page: Page Introduction */
+.contact-header {
+	text-align: center;
+	padding: 50px 20px 30px;
+	background-color: #f4f7f5;
+}
+.contact-header h1 {
+	color: #064e3b;
+	font-size:36px;
+	margin-bottom:15px;
+}
+.contact-header p {
+	color:#555;
+	font-size:18px;
+	line-height: 1.6;
+	max-width: 650px;
+	margin: 0 auto;
+}
+
+/* Contact Page: Form section */
+
+.contact-section { 
+	max-width:700px;
+	margin: 40px auto;
+	padding:35px;
+	background-color: white;
+	border-radius:12px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+.contact-section h2 {
+	color: #064e3b;
+	text-align:center;
+	font-size:26px;
+	margin-top:0;
+	margin-bottom: 30px;
+}
+
+/*Form layout*/
+#contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+/*Labels above the fields*/
+#contact-form label {
+	font-weight: bold;
+	color: #333;
+	margin-top: 10px;
+}
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+
+/*Allow the messagem area to be resized vertically*/
+#contact-form textarea { 
+resize: vertical;
+}
+
+#contact-form button {
+	margin-top: 15px;
+	padding:14px;
+	background-color: #047857;
+	color:white;
+	border:none;
+	border-radius: 30px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+/*Button hover effect*/
+#contact-form button:hover{
+	background-color: #065f46;
+}
+
+/*  Contact Page: Responsive Design */
+
+@media (max-width: 600px){
+.contact-header { 
+	padding: 35px 20px 25px;
+	}
+.contact-header h1 {
+	font-size: 30px;
+	}
+.contact-header p {
+	font-size:16px;
+	}
+.contact-section { 
+	margin: 25px 15px;
+	padding: 22px;
+	}
+.contact-section h2 {
+	font-size:23px;
+	}
+}
+
+/* FEEDBACK */
+
+/* General styling for form feedback*/
+#form-feedback {
+	margin-top: 15px;
+	padding: 12px;
+	border-radius: 6px;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/*Error message styling*/
+#form-feedback.error{
+	color:#b91c1c;
+	background-color: #fee2e2;
+	border: 1px solid #fecaca;
+}
+
+/*Sucess message styling */
+#form-feedback.success {
+	color: #166534;
+	background-color: #dcfce7;
+	border: 1px solid #bbf7d0;
+}
+
+/* EXPERIENCE RESULTS  */
+
+#results-count {
+	display: inline-block;
+	margin-top: 18px;
+	padding: 8px 16px;
+	background-color:#d1fae5;
+	color: #065f46;
+	border: 1px solid #a7f3d0;
+	border-radius: 20px;
+	font-size:14px;
+	font-weight: bold;
+}
+
+
+/* HOLIDAY BUDGET CALCULATOR */
+
+.budget-calculator {
+    padding: 60px 20px;
+    background-color: #f1f6f2;
+    text-align: center;
+}
+
+.budget-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.budget-container h2 {
+    color: #14532d;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.budget-container > p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.budget-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
+}
+
+.budget-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.budget-field input,
+.budget-field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#calculate-budget {
+    margin-top: 25px;
+    padding: 12px 28px;
+    background-color: #14532d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#calculate-budget:hover {
+    background-color: #1f7542;
+}
+
+#budget-result {
+    margin-top: 25px;
+    padding: 15px;
+    color: #14532d;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Responsive budget calculator */
+
+@media (max-width: 700px) {
+.budget-form {
+	grid-template-columns: 1fr;
+    }
+
+.budget-container {
+	padding: 25px 20px;
+    }
+
+.budget-container h2 {
+    font-size: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
